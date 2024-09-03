@@ -1,6 +1,6 @@
 package main
 
-//ก็อป
+
 
 import (
 	"encoding/json"
@@ -29,6 +29,7 @@ func main() {
 	accountBalance = Bookbank()
 	Productlist = ReadFile()
 	Chartlist = ReadFileChart()
+	cleanUpCart()
 	for {
 		clearScreen()
 		Welcome()
@@ -314,7 +315,7 @@ func ReadFileChart() map[string]*Product {
 	return ProductData
 }
 
-// ก็อป
+
 func clearScreen() {
 	switch runtime.GOOS {
 	case "linux", "darwin":
@@ -329,4 +330,14 @@ func clearScreen() {
 		fmt.Print("\033[2J")
 		fmt.Print("\033[H")
 	}
+}
+
+func cleanUpCart() {
+	
+	for id := range Chartlist {
+		if _, exists := Productlist[id]; !exists {
+			delete(Chartlist, id)
+		}
+	}
+savedata()
 }

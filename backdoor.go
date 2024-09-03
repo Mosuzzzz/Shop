@@ -1,6 +1,6 @@
 package main
 
-//ก็อป
+
 
 import (
 	"encoding/json"
@@ -85,7 +85,7 @@ func AddProduct()  {
 	savedata()
 
 }
-//ก็อป
+
 func savedata() {
 	data, err := json.Marshal(Productlist)
 	if err != nil {
@@ -98,7 +98,7 @@ func savedata() {
 	fmt.Println("OK HURBLE")
 }
 
-//ก็อป
+
 func ListProduct()  {
 	if len(Productlist) == 0 {
 		fmt.Println("Emtry Peoduct")
@@ -154,7 +154,7 @@ func ReadFile() map[string]*Product {
 	return ProductData
 }
 
-//ก็อป
+
 func clearScreen() {
 	switch runtime.GOOS {
 	case "linux", "darwin":

@@ -212,7 +212,7 @@ func ListinChart() {
 	}
 }
 
-// ก็อป
+
 func ListProduct() {
 	if len(Productlist) == 0 {
 		fmt.Println("Emtry Peoduct")

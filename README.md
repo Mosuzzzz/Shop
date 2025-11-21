@@ -39,3 +39,20 @@ It uses `save.json` to store shop data — easy to understand, modify, and exten
 ```bash
 git clone https://github.com/Mosuzzzz/GoShop.git
 cd GoShop
+```
+
+###3️⃣ Run the project
+```bash
+go run .
+```
+
+###📂 Project Structure
+```bash
+GoShop/
+├── backdoor.go     # Main backend logic
+├── save.json       # Shop data storage
+├── font_Store/     # (Optional assets)
+└── go.mod          # Module configuration
+```
+
+
